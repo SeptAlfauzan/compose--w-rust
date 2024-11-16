@@ -1,0 +1,17 @@
+[package]
+name = "rust-bridge"
+version = "0.1.0"
+edition = "2021"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+uniffi = { version = "0.27.1", features = ["cli"]}
+
+[lib]
+crate-type = ["cdylib"]
+name = "sample"
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
